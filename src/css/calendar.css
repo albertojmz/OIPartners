@@ -1,0 +1,151 @@
+.main#calendar {
+	background-color: #ddd !important;
+}
+
+#calendar-show-today {
+	position: absolute;
+	right: 20px;
+	top: 3px;
+}
+
+.cld-main {
+	width: 100%;
+	height: 100%;
+}
+
+.cld-days {
+	height: calc(100% - 100px);
+}
+
+.cld-main a {
+	color: #7B00FF;
+}
+
+.cld-datetime {
+	position: relative;
+	width: 66%;
+	min-width: 100px;
+	max-width: 300px;
+	margin: auto;
+	overflow: hidden;
+	padding: 10px 0;
+	margin-top: -10px;
+	margin-bottom: 10px;
+}
+
+.cld-datetime .today {
+	position: relative;
+	float: left;
+	width: calc(100% - 40px);
+	margin: auto;
+	text-align: center;
+	font-size: x-large;
+	font-weight: bold;
+}
+
+.cld-nav {
+	position: relative;
+	width: 20px;
+	height: 20px;
+	margin-top: 10px;
+}
+
+.cld-nav:hover {
+	cursor: pointer;
+}
+
+.cld-nav:hover svg {
+	fill: black;
+}
+
+.cld-rwd {
+	float: left;
+}
+
+.cld-fwd {
+	float: right;
+}
+
+.cld-nav svg:hover {
+	
+}
+
+.cld-labels {
+	background-color: white;
+	margin-bottom: 5px !important;
+}
+
+.cld-label {
+	padding: 10px 0;
+	border: 1px solid #ddd;
+}
+
+.cld-labels, .cld-days {
+	padding-left: 0;
+}
+
+.cld-label, .cld-day {
+	box-sizing: border-box;
+	display: inline-block;
+	width: 14.28%;
+	text-align: center;
+}
+
+.cld-day {
+	display: block;
+	float: left;
+	position: relative;
+	margin: 0;
+	padding: 5px;
+	height: calc(100% / 6);
+	border: 1px solid #ddd;
+	overflow-y: auto;
+	background-color: white;
+}
+
+.cld-day.clickable:hover {
+	cursor: pointer;
+}
+
+.cld-day.today {
+	border: 1px solid #504949;
+	border-radius: 5px;
+}
+
+.cld-day.disableDay {
+	opacity: 0.5;
+}
+
+.cld-day.nextMonth, .cld-day.prevMonth {
+	opacity: 0.4;
+}
+
+.cld-number {
+	margin: 0;
+	text-align: left;
+}
+
+.cld-title {
+	font-size: 10px;
+	display: block;
+	margin: 0;
+	background-color: #ffc163;
+	color: #504949;
+	font-weight: bold;
+	font-size: 10px;
+	border-radius: 5px;
+	padding: 3px 10px;
+	margin-bottom: 2px;
+}
+
+.cld-day:hover {
+	background: rgba(255, 255, 255, 0.2)
+}
+
+.cld-number.eventday {
+	font-weight: bold;
+}
+
+.today .cld-number.eventday:hover {
+	
+}

@@ -1,0 +1,373 @@
+html, body, .app-wrapper {
+	height: 100%;
+}
+
+body {
+	font-family: sans-serif;
+	font-size: 14px;
+	margin: 0;
+	background: linear-gradient(#ddd, white) !important;
+	overflow: hidden;
+}
+
+nav.navbar-default {
+	border-radius: 0;
+	display: flex;
+	justify-content: center;
+}
+
+nav.navbar-default .navbar-header-brand {
+	position: absolute;
+	left: 20px;
+}
+
+nav.navbar-default .navbar-header-brand .navbar-brand {
+	font-weight: bolder;
+}
+
+nav.navbar-default .navbar-header-brand small {
+	color: #069;
+	font-weight: bolder;
+	font-size: 8px;
+	position: absolute;
+	bottom: 6px;
+	width: 50px;
+	left: 55px;
+}
+
+.hidden {
+	display: none;
+}
+
+.app-wrapper .container-fluid {
+	margin-top: 20px;
+	margin-bottom: 50px;
+	height: calc(100% - 122px);
+}
+
+.board {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-content: flex-start;
+	height: 100%;
+}
+
+.list {
+	padding: 8px;
+	border-radius: 8px;
+	background: #f8f8f8;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+	margin: 3px;
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	background: linear-gradient(rgba(0, 102, 153,0.8), rgba(0, 102, 153,0.3)) !important;
+}
+
+.add-task, .import-tasks {
+	cursor: pointer;
+	position: absolute;
+	right: 25px;
+	bottom: 25px;
+	height: 45px;
+	width: 45px;
+	background-color: #504949;
+	color: white;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	flex-direction: row;
+	font-size: initial;
+	border-radius: 100%;
+	z-index: 100;
+	box-shadow: 2px 2px 10px #504949;
+}
+
+.import-tasks {
+	right: 80px !important;
+}
+
+.add-task:hover, .import-tasks:hover {
+	background-color: #776c6c !important;
+}
+
+.add-task span, .import-tasks span {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+.card {
+	border-radius: 5px;
+	background: #fff;
+	border: 1px solid #ddd;
+	margin-bottom: 5px;
+	padding: 8px 10px;
+	-webkit-transition: all 0.3 ease;
+	color: #000;
+	cursor: grab;
+}
+
+.card.no-draggable {
+	cursor: initial;
+	opacity: 0.7;
+}
+
+.card .task-title {
+	font-weight: bold;
+	font-size: 14px;
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 2px;
+	margin-bottom: 6px;
+	text-transform: uppercase;
+}
+
+.card .task-description {
+	font-style: italic;
+	font-size: 12px;
+}
+
+.card .task-user {
+	font-size: 10px;
+	padding-top: 3px;
+	text-align: right;
+}
+
+.card .close {
+	margin-top: -3px;
+    margin-right: -3px;
+	opacity: 0.5;
+}
+
+.card .close:hover {
+	opacity: 0.8;
+}
+
+/*.card:hover {
+	opacity: 0.7;
+}*/
+
+.card.dragging {
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+	-webkit-transform: rotate(-2deg);
+}
+
+.card-placeholder {
+	display: block;
+	height: 40px;
+	border: 1px dashed #ddd;
+	margin: 3px 0;
+	border-radius: 5px;
+}
+
+.listname {
+	margin: 0 0 10px;
+	font-size: 14px;
+	text-transform: uppercase;
+	padding: 5px;
+	border-bottom: 1px dashed #ddd;
+	text-overflow: ellipsis;
+	user-select: none;
+	font-weight: bolder;
+	color: white;
+}
+
+.listname > span {
+	float: right;
+	font-weight: normal;
+	font-size: 13px;
+}
+
+.header {
+	padding: 20px;
+	height: 70px;
+	position: relative;
+	background-color: #09446b;
+}
+
+.logo {
+	margin: 0;
+	display: inline-block;
+}
+
+.logo small {
+	font-size: 9px;
+	font-weight: normal;
+	color: rgba(255, 255, 255, 0.5);
+	display: block;
+	text-align: right;
+	letter-spacing: 1px;
+}
+
+.form-add-todo, .form-add-list {
+	padding: 10px 20px;
+	background: #0c79c1;
+}
+
+.form-add-todo input, .form-add-list input {
+	margin-left: 10px;
+}
+
+.form-add-list {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
+
+input[type=text] {
+	padding: 5px 10px;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+	font-size: 13px;
+}
+
+.total-card-counter {
+	display: inline-block;
+	margin: 0;
+	padding: 10px 20px;
+	font-size: 16px;
+	font-weight: bold;
+	position: absolute;
+	right: 0;
+	bottom: 15px;
+}
+
+#error-task {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	z-index: -1;
+}
+
+#error-task .modal-body {
+	text-align: center;
+	border-radius: 5px;
+	color: #b94a48;
+	background-color: #f2a9a94d;
+	border: 1px solid #b94a48;
+	margin: 0;
+}
+
+.form-worked-hours, .worked-hours {
+	padding-top: 7px;
+	margin-top: 7px;
+	border-top: 1px solid #ddd;
+}
+
+.form-worked-hours input {
+	width: 63%;
+	margin-right: 2%;
+}
+
+.form-worked-hours button {
+	width: 33%;
+}
+
+.worked-hours table {
+	width: 100%;
+	font-size: smaller;
+}
+
+.worked-hours table tr, .worked-hours table td {
+	padding: 0 5px;
+}
+
+.worked-hours .worked-hours-submitted {
+	padding: 4px;
+	background-color: #ddd;
+	border: 1px solid #bab9b9;
+	border-radius: 5px;
+	margin-bottom: 3px;
+	cursor: text;
+}
+
+.dropzone {
+	border-radius: 6px;
+	background-color: #dddddd45;
+	border: 1px solid #504949;
+	cursor: pointer;
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+	justify-content: center;
+}
+
+.dz-default.dz-message {
+	font-style: italic;
+	margin-top: 40px !important;
+}
+
+.dropzone.dz-drag-hover {
+	background-color: #ddd !important;
+}
+
+.dropzone:hover {
+	background-color: #eeeeee;
+}
+
+.dropzone .dz-preview .dz-details .dz-filename:hover span {
+	border: initial !important;
+	background-color: initial !important;
+}
+
+#import-tasks .error-import {
+	margin-top: 20px;
+	background-color: #f2a9a94d;
+	border: 1px solid #b94a48;
+	border-radius: 5px;
+	color: #b94a48;
+	padding: 10px;
+}
+
+#import-tasks .error-import .error-title {
+	font-weight: bold;
+	font-size: 12px;
+}
+
+#import-tasks .error-import ul {
+	padding-left: 30px;
+	font-size: 12px;
+	list-style: decimal;
+}
+
+.dropzone .dz-preview .dz-progress {
+	width: 100% !important;
+	border: 1px solid #aaa !important;
+	position: initial !important;
+	height: 10px !important;
+	margin-top: 10px !important;
+	margin-left: 0px !important;
+	margin-bottom: -10px !important;
+}
+
+.dropzone .dz-preview {
+	width: 100%;
+}
+
+.dropzone .dz-image {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.dropzone .dz-preview.dz-complete .dz-progress {
+	opacity: 1 !important;
+}
+
+.dropzone .dz-preview .dz-progress .dz-upload {
+	background: linear-gradient(to bottom, #71c864, #296808) !important;
+}
+
+
+
+
+
+
+
+

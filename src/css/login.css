@@ -1,0 +1,160 @@
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	background: linear-gradient(#ddd, white) !important;
+	overflow-y: auto;
+	overflow-x: hidden;
+	background-attachment: fixed !important;
+}
+
+
+
+nav li {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+nav #sign-up {
+    color: #428bca;
+    font-weight: bold
+}
+
+.login-form {
+	font-size: small;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	padding-top: 50px;
+	height: 100%;
+	width: 100%;
+}
+
+.login-form > .row,
+.text-info > .row {
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+	justify-content: center;
+}
+
+.login-form h3 {
+	color: rgba(0,0,0,0.7);
+}
+
+.login-form img {
+	max-height: 150px;
+	width: 100%;
+	object-fit: scale-down;
+}
+
+
+.form-signin label {
+	color: rgba(0,0,0,0.5);
+	font-weight: lighter;
+	font-size: 10px;
+	line-height: 0.5;
+	margin-bottom: 5px;
+}
+
+.form-signin button {
+	margin-top: 15px !important;
+	font-size: smaller;
+}
+
+
+
+.with-errors {
+	margin-top: 5px !important;
+}
+
+.with-errors li {
+	font-size: 10px;
+}
+
+.login-wrapper {
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	padding: 20px 30px 20px;
+	background-color: white;
+	margin-top: 100px;
+}
+
+.login-wrapper input {
+	border-radius: 5px !important;
+}
+
+.login-wrapper #basic-addon2 {
+	background: white;
+	border: none;
+	color: rgba(0,0,0,0.5);
+	padding: 5px;
+}
+
+label.remember-me {
+	line-height: 25.5px;
+}
+
+.text-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	width: 100%;
+	color: rgba(0,0,0,0.5);
+	font-size: 11px;
+}
+
+.text-info p {
+	padding: 15px 0px;
+	border-top: 1px solid #ddd;
+}
+
+.alert {
+	font-size: 10px;
+    padding: 10px 15px;
+}
+
+.alert-danger {
+	color: #b94a48;
+	background-color: #f2dede4d;
+}
+
+.alert-success {
+	color: #468847;
+	background-color: #dff0d84d;
+}
+
+div#role_login.select{
+		margin-top:5px;
+	margin-bottom:7px;
+}
+
+
+
+.title{
+	margin-left: 4px;
+}
+
+#category_signin{
+	margin-bottom: 150px;
+	margin-top: 10px;
+}
+
+#element{
+	font-weight: inherit;
+font-size: small;
+}
+
+.form-group {
+	font-size: smaller;
+	font-weight: 100;
+	display: grid;
+}
+
+.forgetPassword{
+	margin-top: 10px;
+}
